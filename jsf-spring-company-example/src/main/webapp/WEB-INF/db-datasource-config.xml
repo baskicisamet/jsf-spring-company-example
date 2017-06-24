@@ -13,7 +13,7 @@
 	<bean
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="location">
-			<value>classpath:jdbc/jdbc.properties</value>
+			<value>classpath:properties/jdbc/jdbc.properties</value>
 		</property>
 	</bean>
 
