@@ -3,8 +3,8 @@
  */
 /**
  * @author Sam
- * 
- * model layer
+ *
+ *model layer
  *
  */
 package domain;
