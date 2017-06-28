@@ -1,6 +1,12 @@
 package repository;
 
 import java.lang.reflect.ParameterizedType;
+import java.util.List;
+
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -69,5 +75,18 @@ public class AbstractRepository<E extends IEntity> {
 	
 	
 	
+	public List<E> getAll(){
+		
+		Session session = sessionFactory.getCurrentSession();
+		
+		CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
+		CriteriaQuery<E> criteriaQuery = criteriaBuilder.createQuery(entityClass);
+		Root<E> empRoot = criteriaQuery.from(entityClass);
+		criteriaQuery.select(empRoot);
+		TypedQuery<E> query = session.createQuery(criteriaQuery);
+		
+		return query.getResultList();
+		
+	}
 	
 }
