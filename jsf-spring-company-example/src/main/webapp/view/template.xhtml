@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+ 
+<h:head>
+	<title>${pageTitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<h:outputStylesheet library="css" name="default.css"  />
+	
+		<f:facet name="middle">
+            <h:outputStylesheet name="bootstrap/css/bootstrap.css" />
+            
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" />
+            
+            <h:outputScript name="bootstrap/js/bootstrap.js" />
+        </f:facet>
+        
+</h:head>
+ 
+<h:body>
+	<div id="container">
+ 
+		<div id="header" class="header">
+			<ui:include src="header.xhtml" />
+		</div>
+ 
+		<div id="menu" class="menu">
+			<ui:include src="menu.xhtml" />
+		</div>
+ 
+		<div id="content" class="content">
+			<ui:insert name="content">
+				<h:outputText value="buraya içerik gelecek" />
+			</ui:insert>
+		</div>
+ 
+		<div id="bottom" class="bottom">
+			<ui:include src="bottom.xhtml" />
+		</div>
+ 
+	</div>
+</h:body>
+ 
+</html>

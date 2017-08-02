@@ -1,0 +1,50 @@
+
+body {
+	background-color: #E2E2E2;
+	font-size: 12px;
+	font-family: Verdana, "Verdana CE", Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+	color: #000000;
+	margin: 10px;
+}
+ 
+#container {
+	border: 1px solid navy;
+	margin-left: 100px;
+	margin-right: 100px;
+	border-radius: 5px;
+}
+ 
+#header {
+	height: 100px;
+	position: relative;
+	background-color: #036fab;
+	color: white;
+	padding: 5px;
+	margin: 0px 0px 5px 0px;
+}
+ 
+#menu {
+	height: 30px;
+	vertical-align: middle;
+	border: 1px solid navy;
+	font-weight: bold;
+	margin: 5px 5px;
+}
+
+#menu a {
+	margin:10px;
+}
+ 
+#content {	
+	padding: 5px;
+	margin: 5px 5px;
+	border: 1px solid navy;
+	min-height: 300px;
+}
+ 
+#bottom {
+	position: relative;
+	padding: 5px;
+	margin: 5px 5px;
+	border-top: 1px solid navy;
+}
