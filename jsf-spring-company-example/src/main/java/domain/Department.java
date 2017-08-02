@@ -15,8 +15,7 @@ public class Department implements IEntity {
 	private String name;
 	@OneToOne
 	private Address address;
-	@ManyToOne
-	private Company company;
+	
 	
 	
 	public long getId() {

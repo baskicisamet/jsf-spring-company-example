@@ -6,7 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Company implements IEntity {
@@ -14,8 +16,9 @@ public class Company implements IEntity {
 	@GeneratedValue(strategy=GenerationType.TABLE)
 	private long id;
 	private String name;
+	@OneToOne
 	private Address address;
-	@OneToMany
+	@ManyToMany
 	private List<Department> departments;
 	
 	public Company() {
