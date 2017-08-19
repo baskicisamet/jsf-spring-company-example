@@ -35,8 +35,11 @@ public class AbstractRepository<E extends IEntity> {
 	
 	public void save(E entity){
 		
+		
+		
 		Session session = sessionFactory.getCurrentSession();
-		session.persist(entity);
+		
+			session.save(entity);
 		
 		
 	}
